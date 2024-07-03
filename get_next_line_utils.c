@@ -6,7 +6,7 @@
 /*   By: iizquier <iizquier@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/25 15:30:02 by iizquier          #+#    #+#             */
-/*   Updated: 2024/07/03 19:33:38 by iizquier         ###   ########.fr       */
+/*   Updated: 2024/07/03 19:54:11 by iizquier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,6 @@ char	*ft_strjoin(char *str1, char *str2)
         j++;
     }
     str[i] = 0;
-    free(str1);
     return (str);
 }
 
