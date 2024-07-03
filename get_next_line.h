@@ -6,7 +6,7 @@
 /*   By: iizquier <iizquier@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/25 15:29:09 by iizquier          #+#    #+#             */
-/*   Updated: 2024/07/02 12:42:05 by iizquier         ###   ########.fr       */
+/*   Updated: 2024/07/03 19:14:43 by iizquier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@
 # include <sys/types.h>
 # include <sys/uio.h>
 
-size_t	ft_strlen(char *str);
+size_t	ft_strlen(const char *str);
 char	*ft_strjoin(char *str1, char *str2);
 char	*ft_strchr(const char *str, int c);
 char	*extract_line(char *stack);	
