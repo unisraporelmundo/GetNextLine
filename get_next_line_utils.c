@@ -6,7 +6,7 @@
 /*   By: iizquier <iizquier@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/25 15:30:02 by iizquier          #+#    #+#             */
-/*   Updated: 2024/07/03 19:54:11 by iizquier         ###   ########.fr       */
+/*   Updated: 2024/07/04 13:16:01 by iizquier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,14 +31,10 @@ char	*ft_strjoin(char *str1, char *str2)
     int		j;
 
     if (!str1 || !str2)
-    {
         return (NULL);
-    }
     str = (char *)malloc(ft_strlen(str1) + ft_strlen(str2) + 1);
     if (!str)
-    {
-        return (NULL);
-    }
+        return (NULL);    
     i = 0;
     j = 0;
     while (str1[i])
