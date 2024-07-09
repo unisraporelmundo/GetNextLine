@@ -6,7 +6,7 @@
 /*   By: iizquier <iizquier@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/25 15:31:00 by iizquier          #+#    #+#             */
-/*   Updated: 2024/07/09 17:01:38 by iizquier         ###   ########.fr       */
+/*   Updated: 2024/07/09 17:09:21 by iizquier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,9 @@
 char	*extract_line(char *stack)
 {
 	char	*line;
-	int 	i;
-	
-	if(!stack || !*stack)
+	int		i;
+
+	if (!stack || !*stack)
 		return (NULL);
 	i = 0;
 	while (stack[i] != '\n' && stack[i] != '\0')
@@ -43,10 +43,10 @@ char	*extract_line(char *stack)
 
 char	*up_stack(char *stack)
 {
-	char *tmp;
-	char *ptr;
-	int i;
-	
+	char	*tmp;
+	char	*ptr;
+	int		i;
+
 	ptr = ft_strchr(stack, '\n');
 	if (!ptr)
 	{
@@ -71,7 +71,8 @@ char	*up_stack(char *stack)
 
 char	*joinfree(char *stack, char *tmp)
 {
-	char *aux;
+	char	*aux;
+
 	if (!stack)
 	{
 		stack = malloc(1);
