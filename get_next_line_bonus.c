@@ -6,7 +6,7 @@
 /*   By: iizquier <iizquier@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/25 15:31:25 by iizquier          #+#    #+#             */
-/*   Updated: 2024/07/09 16:21:04 by iizquier         ###   ########.fr       */
+/*   Updated: 2024/07/09 17:01:59 by iizquier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,6 +71,17 @@ char	*up_stack(char *stack)
 
 char	*joinfree(char *stack, char *tmp)
 {
+	char *aux;
+	if (!stack)
+	{
+		stack = malloc(1);
+		stack[0] = '\0';
+	}
+	if (!stack)
+		return (NULL);
+	aux = ft_strjoin(stack, tmp);
+	free(stack);
+	return (aux);
 }
 
 char	*get_next_line(int fd)
