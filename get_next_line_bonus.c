@@ -6,11 +6,11 @@
 /*   By: iizquier <iizquier@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/25 15:31:25 by iizquier          #+#    #+#             */
-/*   Updated: 2024/07/10 16:10:43 by iizquier         ###   ########.fr       */
+/*   Updated: 2024/07/10 16:14:45 by iizquier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "get_next_line_bonus.h"
 
 char	*extract_line(char *stack)
 {
