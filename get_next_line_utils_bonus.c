@@ -6,7 +6,7 @@
 /*   By: iizquier <iizquier@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/25 15:30:37 by iizquier          #+#    #+#             */
-/*   Updated: 2024/07/10 18:00:43 by iizquier         ###   ########.fr       */
+/*   Updated: 2024/07/10 18:31:18 by iizquier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,51 +17,48 @@ size_t	ft_strlen(const char *str)
 	size_t	i;
 
 	i = 0;
-	while (str[i])
-	{
+	while (str != NULL && str[i] != 0)
 		i++;
-	}
 	return (i);
 }
 
 char	*ft_strjoin(char *str1, char *str2)
 {
-	char	*str;
 	int		i;
 	int		j;
+	char	*str;
 
-	if (!str1 || !str2)
-		return (NULL);
-	str = (char *)malloc(ft_strlen(str1) + ft_strlen(str2) + 1);
-	if (!str)
-		return (NULL);
 	i = 0;
 	j = 0;
-	while (str1[i])
+	str = malloc((ft_strlen(str1) + ft_strlen(str2) + 1) * sizeof(char));
+	if (!str)
+		return (NULL);
+	while (str1[i] != '\0')
 	{
 		str[i] = str1[i];
 		i++;
 	}
-	while (str2[j])
+	while (str2[j] != '\0')
 	{
-		str[i] = str2[j];
-		i++;
+		str[i + j] = str2[j];
 		j++;
 	}
-	str[i] = 0;
-	free(str1);
+	str[i + j] = '\0';
 	return (str);
 }
 
 char	*ft_strchr(const char *str, int c)
 {
-	while (*str != (char)c)
+	char	*ptr;
+
+	if (!str)
+		return (NULL);
+	ptr = (char *)str;
+	while (ptr && *ptr != (char)c)
 	{
-		if (*str == 0)
-		{
+		if (*ptr == '\0')
 			return (NULL);
-		}
-		str++;
+		ptr++;
 	}
-	return ((char *)str);
+	return (ptr);
 }

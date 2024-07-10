@@ -6,7 +6,7 @@
 /*   By: iizquier <iizquier@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/25 15:31:00 by iizquier          #+#    #+#             */
-/*   Updated: 2024/07/10 16:09:56 by iizquier         ###   ########.fr       */
+/*   Updated: 2024/07/10 18:39:09 by iizquier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ char	*up_stack(char *stack)
 	if (!tmp)
 		return (NULL);
 	i = 0;
-	while (ptr != '\0')
+	while (*ptr != '\0')
 	{
 		tmp[i] = *ptr;
 		i++;
@@ -76,6 +76,8 @@ char	*joinfree(char *stack, char *tmp)
 	if (!stack)
 	{
 		stack = malloc(1);
+		if (!stack)
+			return (NULL);
 		stack[0] = '\0';
 	}
 	if (!stack)
@@ -108,4 +110,16 @@ char	*get_next_line(int fd)
 	line = extract_line(stack);
 	stack = up_stack(stack);
 	return (line);
+}
+int main()
+{
+	int fd = open("text.txt", O_RDONLY);
+	char *line;
+	while ((line = get_next_line(fd)))
+	{
+		printf("%s", line);
+		free(line);
+	}
+	close(fd);
+	return (0);
 }
