@@ -6,7 +6,7 @@
 /*   By: iizquier <iizquier@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/25 15:31:25 by iizquier          #+#    #+#             */
-/*   Updated: 2024/07/10 16:14:45 by iizquier         ###   ########.fr       */
+/*   Updated: 2024/07/10 19:05:09 by iizquier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ char	*up_stack(char *stack)
 	if (!tmp)
 		return (NULL);
 	i = 0;
-	while (ptr != '\0')
+	while (*ptr != '\0')
 	{
 		tmp[i] = *ptr;
 		i++;
@@ -88,7 +88,7 @@ char	*joinfree(char *stack, char *tmp)
 char	*get_next_line(int fd)
 {
 	static char	*stack[FD_MAX] = {NULL};
-	char		*tmp[BUFFER_SIZE + 1];
+	char		tmp[BUFFER_SIZE + 1];
 	char		*line;
 	ssize_t		readbytes;
 
@@ -109,3 +109,24 @@ char	*get_next_line(int fd)
 	stack[fd] = up_stack(stack[fd]);
 	return (line);
 }
+
+/* int main()
+{
+	printf("BUFFER_SIZE=%d\n", BUFFER_SIZE);
+	char *line1 = NULL;
+	char *line2 = NULL;
+	int fd = open("text.txt", O_RDONLY);
+	int fd2 = open("text1.txt", O_RDONLY);
+	int i = 0;
+	while (i++ < 3)
+	{
+		line1 = get_next_line(fd);
+		line2 = get_next_line(fd2);
+		printf("fd1: %s\n", line1);
+		printf("fd2:%s\n", line2);
+		free(line1);
+		free(line2);
+	}
+	close(fd);
+	close(fd2);
+} */

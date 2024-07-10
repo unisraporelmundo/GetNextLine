@@ -6,7 +6,7 @@
 /*   By: iizquier <iizquier@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/25 15:31:00 by iizquier          #+#    #+#             */
-/*   Updated: 2024/07/10 18:39:09 by iizquier         ###   ########.fr       */
+/*   Updated: 2024/07/10 19:22:58 by iizquier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -111,7 +111,7 @@ char	*get_next_line(int fd)
 	stack = up_stack(stack);
 	return (line);
 }
-int main()
+/* int main()
 {
 	int fd = open("text.txt", O_RDONLY);
 	char *line;
@@ -122,4 +122,4 @@ int main()
 	}
 	close(fd);
 	return (0);
-}
+} */
