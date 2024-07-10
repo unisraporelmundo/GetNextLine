@@ -6,7 +6,7 @@
 /*   By: iizquier <iizquier@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/25 15:31:00 by iizquier          #+#    #+#             */
-/*   Updated: 2024/07/10 16:04:06 by iizquier         ###   ########.fr       */
+/*   Updated: 2024/07/10 16:09:56 by iizquier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,10 +87,11 @@ char	*joinfree(char *stack, char *tmp)
 
 char	*get_next_line(int fd)
 {
-	static char *stack = NULL;
-	char tmp[BUFFER_SIZE + 1];
-	char *line;
-	ssize_t readbytes;
+	static char	*stack = NULL;
+	char		tmp[BUFFER_SIZE + 1];
+	char		*line;
+	ssize_t		readbytes;
+
 	if (fd < 0 || BUFFER_SIZE <= 0)
 		return (NULL);
 	readbytes = 1;
