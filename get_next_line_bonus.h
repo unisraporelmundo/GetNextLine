@@ -6,7 +6,7 @@
 /*   By: iizquier <iizquier@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/25 15:29:38 by iizquier          #+#    #+#             */
-/*   Updated: 2024/07/03 19:52:50 by iizquier         ###   ########.fr       */
+/*   Updated: 2024/07/10 15:56:49 by iizquier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 # define GET_NEXT_LINE_BONUS_H
 
 # ifndef FD_MAX
-#  define FD_MAX 4096
+#  define FD_MAX 1024
 
 # endif
 

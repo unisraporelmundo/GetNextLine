@@ -6,7 +6,7 @@
 /*   By: iizquier <iizquier@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/25 15:31:25 by iizquier          #+#    #+#             */
-/*   Updated: 2024/07/09 17:12:47 by iizquier         ###   ########.fr       */
+/*   Updated: 2024/07/10 15:57:28 by iizquier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,4 +87,24 @@ char	*joinfree(char *stack, char *tmp)
 
 char	*get_next_line(int fd)
 {
+	static char *stack[FD_MAX] = {NULL};
+	char		*tmp[BUFFER_SIZE + 1];
+	char		*line;
+	ssize_t		readbytes;
+	if (fd < 0 || BUFFER_SIZE <= 0)
+		return (NULL);
+	readbytes = 1;
+	while (!(ft_strchr(stack[fd], '\n')) && readbytes > 0)
+	{
+		readbytes = read(fd, tmp, BUFFER_SIZE);
+		if (readbytes < 0)
+			return (free(stack[fd]), stack[fd] = NULL, NULL);
+		tmp[readbytes] = '\0';
+		stack[fd] = joinfree(stack[fd], tmp);
+		if (!stack[fd])
+			return (NULL);
+	}
+	line = extract_line(stack[fd]);
+	stack[fd] = up_stack(stack[fd]);
+	return (line);
 }
