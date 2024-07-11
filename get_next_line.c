@@ -6,7 +6,7 @@
 /*   By: iizquier <iizquier@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/25 15:31:00 by iizquier          #+#    #+#             */
-/*   Updated: 2024/07/10 19:22:58 by iizquier         ###   ########.fr       */
+/*   Updated: 2024/07/11 13:34:34 by iizquier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,7 @@ char	*up_stack(char *stack)
 	if (!ptr)
 	{
 		free(stack);
+		stack = NULL;
 		return (NULL);
 	}
 	ptr++;

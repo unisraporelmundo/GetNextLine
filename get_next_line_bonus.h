@@ -6,7 +6,7 @@
 /*   By: iizquier <iizquier@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/25 15:29:38 by iizquier          #+#    #+#             */
-/*   Updated: 2024/07/10 19:15:11 by iizquier         ###   ########.fr       */
+/*   Updated: 2024/07/11 13:14:22 by iizquier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 # endif
 
 # ifndef BUFFER_SIZE
-#  define BUFFER_SIZE 10000000
+#  define BUFFER_SIZE 4096
 
 # endif
 

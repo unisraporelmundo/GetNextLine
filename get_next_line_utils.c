@@ -6,7 +6,7 @@
 /*   By: iizquier <iizquier@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/25 15:30:02 by iizquier          #+#    #+#             */
-/*   Updated: 2024/07/10 18:35:09 by iizquier         ###   ########.fr       */
+/*   Updated: 2024/07/11 13:46:37 by iizquier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ char	*ft_strjoin(char *str1, char *str2)
 	int		i;
 	int		j;
 	char	*str;
-	
+
 	if (!str1 || !str2)
 		return (NULL);
 	i = 0;
